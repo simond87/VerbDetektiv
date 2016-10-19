@@ -1,6 +1,22 @@
 
 # -*- coding: utf-8 -*-
 
+verben_paa_fil = open('verben.txt', 'r')
+
+rad = verben_paa_fil.readline()
+verb_fr_rad = rad.split()
+vx = {rad[0]: (rad[1], rad[2], rad[3])}
+print (vx)
+raeknare = 1
+while raeknare < len(verben_paa_fil):
+    
+    rad = verben_paa_fil.readline().split()
+    vx[rad[0]] = (rad[1], rad[2], rad[3])
+    
+
+verben_paa_fil.close()
+
+
 verblista = {"acceptera": ("accepterar", "accepterade", "accepterat")}
 verblista["anlända"] = ("anländer", "anlände", "anlänt")
 verblista["använda"] = ("använder", "anlände", "använt")
