@@ -1,147 +1,38 @@
 
 # -*- coding: utf-8 -*-
 
-verben_paa_fil = open('verben.txt', 'r')
-
-rad = verben_paa_fil.readline()
-verb_fr_rad = rad.split()
-vx = {rad[0]: (rad[1], rad[2], rad[3])}
-print (vx)
-raeknare = 1
-while raeknare < len(verben_paa_fil):
-    
-    rad = verben_paa_fil.readline().split()
-    vx[rad[0]] = (rad[1], rad[2], rad[3])
-    
-
-verben_paa_fil.close()
-
-
-verblista = {"acceptera": ("accepterar", "accepterade", "accepterat")}
-verblista["anlända"] = ("anländer", "anlände", "anlänt")
-verblista["använda"] = ("använder", "anlände", "använt")
-verblista["be"] = ("ber", "bad", "bett")
-verblista["begripa"] = ("begriper", "begrep", "begripit")
-verblista["bero"] = ("beror", "berodde", "berott")
-verblista["bestämma"] = ("bestämmer", "bestämde", "bestämt")
-verblista["betala"] = ("betalar", "betalade", "betalat")
-verblista["beträffa"] = ("beträffar", "beträffade", "beträffat")
-verblista["brinna"] = ("brinner", "brann", "brunnit")
-verblista["bränna"] = ("bränner", "brände", "bränt")
-verblista["bry"] = ("bryr", "brydde", "brytt")
-verblista["byta"] = ("byter", "bytte", "bytt")
-verblista["böja"] = ("böjer", "böjde", "böjt")
-verblista["böra"] = ("bör", "borde", "bort")
-verblista["diskutera"] = ("diskuterar", "diskuterade", "diskuterat")
-verblista["dricka"] = ("dricker", "drack", "druckit")
-verblista["dölja"] = ("döljer", "döljde", "döljt")
-verblista["erfara"] = ("erfar", "erfor", "erfarit")
-verblista["falla"] = ("faller", "föll", "fallit")
-verblista["flyga"] = ("flyger", "flög", "flugit")
-verblista["fortsätta"] = ("fortsätter", "fortsatte", "fortsatt")
-verblista["fräta"] = ("fräter", "frätte", "frätt")
-verblista["följa"] = ("följer", "följde", "följt")
-verblista["förbereda"] = ("förbereder", "förberedde", "förberett")
-verblista["förstå"] = ("förstår", "förstod", "förstått")
-verblista["förändra"] = ("förändrar", "förändrade", "förändrat")
-verblista["gå"] = ("går", "gick", "gått")
-verblista["göra"] = ("gör", "gjorde", "gjort")
-verblista["ha"] = ("har", "hade", "haft")
-verblista["hinna"] = ("hinner", "hann", "hunnit")
-verblista["hoppas"] = ("hoppas", "hoppades", "hoppats")
-verblista["hämta"] = ("hämtar", "hämtade", "hämtat")
-verblista["jobba"] = ("jobbar", "jobbade", "jobbat")
-verblista["jämföra"] = ("jämför", "jämförde", "jämfört")
-verblista["klä"] = ("klär", "klädde", "klätt")
-verblista["kläda"] = ("kläder", "klädde", "klätt")
-verblista["knyta"] = ("knyter", "knöt", "knutit")
-verblista["komma"] = ("kommer", "kom", "kommit")
-verblista["krypa"] = ("kryper", "kröp", "krupit")
-verblista["kunna"] = ("kan", "kunde", "kunnat")
-verblista["känna"] = ("känner", "kände", "känt")
-verblista["köra"] = ("kör", "körde", "kört")
-verblista["landa"] = ("landar", "landade", "landat")
-verblista["le"] = ("ler", "log", "lett")
-verblista["leka"] = ("leker", "lekte", "lekt")
-verblista["leva"] = ("lever", "levde", "levt")
-verblista["lida"] = ("lider", "led", "lidit")
-verblista["ligga"] = ("ligger", "låg", "legat")
-verblista["låta"] = ("låter", "lät", "låtit")
-verblista["lägga"] = ("lägger", "lade", "lagt")
-verblista["läsa"] = ("läser", "läste", "läst")
-verblista["lösa"] = ("löser", "löste", "löst")
-verblista["markerade"] = ("markerar", "markerade", "markerat")
-verblista["må"] = ("mår", "mådde", "mått")
-verblista["märka"] = ("märker", "märkte", "märkt")
-verblista["möta"] = ("möter", "mötte", "mött")
-verblista["njuta"] = ("njuter", "njöt", "njutit")
-verblista["peka"] = ("pekar", "pekade", "pekat")
-verblista["plugga"] = ("pluggar", "pluggade", "pluggat")
-verblista["påverka"] = ("påverkar", "påverkade", "påverkat")
-verblista["reflektera"] = ("reflekterar", "reflekterade", "reflekterat")
-verblista["repetera"] = ("repeterar", "repeterade", "repeterat")
-verblista["ringa"] = ("ringer", "ringde", "ringt")
-verblista["röra"] = ("rör", "rörde", "rört")
-verblista["se"] = ("ser", "såg", "sett")
-verblista["sitta"] = ("sitter", "satt", "suttit")
-verblista["sjunga"] = ("sjunger", "sjöng", "sjungit")
-verblista["skina"] = ("skiner", "sken", "skinit")
-verblista["skjuta"] = ("skjuter", "sköt", "skjutit")
-verblista["skola"] = ("ska", "skulle", "skolat")
-verblista["skratta"] = ("skrattar", "skrattade", "skrattat")
-verblista["skriva"] = ("skriver", "skrev", "skrivit")
-verblista["spela"] = ("spelar", "spelade", "spelat")
-verblista["sluta"] = ("slutar", "slutade", "slutat")
-verblista["släcka"] = ("släcker", "släckte", "släckt")
-verblista["slösa"] = ("slösar", "slösade", "slösat")
-verblista["smila"] = ("smilar", "smilade", "smilat")
-verblista["sova"] = ("sover", "sov", "sovit")
-verblista["spinna"] = ("spinner", "spann", "spunnit")
-verblista["sprida"] = ("sprider", "spred", "spritt")
-verblista["springa"] = ("springer", "sprang", "sprungit")
-verblista["stanna"] = ("stannar", "stannade", "stannat")
-verblista["stiga"] = ("stiger", "steg", "stigit")
-verblista["stå"] = ("står", "stod", "stått")
-verblista["socka"] = ("suckar", "suckade", "suckat")
-verblista["supa"] = ("super", "söp", "supit")
-verblista["så"] = ("sår", "sådde", "sått")
-verblista["säga"] = ("säger", "sade", "sagt")
-verblista["sätta"] = ("sätter", "satte", "satt")
-verblista["sälja"] = ("säljer", "sålde", "sålt")
-verblista["söka"] = ("söker", "sökte", "sökt")
-verblista["symbolisera"] = ("symboliserade", "symboliserade", "symboliserat")
-verblista["ta"] = ("tar", "tog", "tagit")
-verblista["tillåta"] = ("tillåter", "tillät", "tillåtit")
-verblista["titta"] = ("tittar", "tittade", "tittat")
-verblista["triva"] = ("ttiver", "trivde", "trivt")
-verblista["träffa"] = ("träffar", "träffade", "träffat")
-verblista["tvinga"] = ("tvingar", "tvingade", "tvingat")
-verblista["tycka"] = ("tycker", "tyckte", "tyckt")
-verblista["täcka"] = ("täcker", "täckte", "täckt")
-verblista["tänka"] = ("tänker", "tänkte", "tänkt")
-verblista["vända"] = ("vänder", "vände", "vänt")
-verblista["umgå"] = ("umgår", "umgick", "umgått")
-verblista["uppskatta"] = ("uppskattar", "uppskattade", "uppskattat")
-verblista["upptäcka"] = ("upptäcker", "upptäckte", "upptäckt")
-verblista["utnyttja"] = ("utnyttjar", "utnyttjade", "utnyttjat")
-verblista["veta"] = ("vet", "visste", "vetat")
-verblista["vara"] = ("är", "var", "varit")
-verblista["vinka"] = ("vinkar", "vinkade", "vinkat")
-verblista["visa"] = ("visar", "visade", "visat")
-verblista["välja"] = ("väljer", "valde", "valt")
-verblista["åka"] = ("åker", "åkte", "åkt")
-verblista["äga"] = ("äger", "ägde", "ägt")
-verblista["älska"] = ("älskar", "älskade", "älskat")
-verblista["äta"] = ("äter", "åt", "ätit")
-verblista["önska"] = ("önskar", "önskade", "önskat")
-verblista["öppna"] = ("öppnar", "öppnade", "öppnat")
-verblista["översätta"] = ("översätter", "översatte", "översatt")
+#21oktober
 
 
 class VerbDetektiv:
-    def __init__(self, verblista):
-        self.verbl = verblista
+    def __init__(self, verbfil, ordboksfil):
+        self.verbl = self.skapa_verblista(verbfil)
+        self.ordbok = self.skapa_ordbok(ordboksfil)        
 
+    def skapa_verblista(self, fil):
+        verben_paa_fil = open(fil, 'r')
+        rad = verben_paa_fil.readline().split()
+        verbl = {rad[0]: (rad[1], rad[2], rad[3])}
+        while True:
+            try:
+                rad = verben_paa_fil.readline().split()
+                verbl[rad[0]] = (rad[1], rad[2], rad[3])
+            except IndexError:
+                break
+    
+        verben_paa_fil.close()
+        return verbl
+
+    def skapa_ordbok(self, fil):
+        ordbok_paa_fil = open(fil, 'r')
+        ordlista = ordbok_paa_fil.readlines()
+        x = 0
+        while x< len(ordlista):
+            ordlista[x] = ordlista[x].strip('\n')
+            x += 1
+        ordbok_paa_fil.close()
+        return ordlista
+        
     def raetta(self, felboejt_verb):
        
         raettad_form = self.slaa_upp(felboejt_verb)
@@ -170,7 +61,10 @@ class VerbDetektiv:
             #print("felboejt_verb.kraanglighet: " + str(felboejt_verb.kraanglighet))
             return felboejt_verb.raettning
         else:
-            return "Inget hittat\n\n"
+            raettad_form = (self.sista_koll(felboejt_verb))
+            if raettad_form:
+                return raettad_form
+        return "Inget hittat\n\n"
 
     def slaa_upp(self, felboejt_verb):
 
@@ -242,6 +136,7 @@ class VerbDetektiv:
 
         if raettad_form:
             felboejt_verb.raettning = raettad_form
+                    
         return raettad_form
 
 
@@ -424,6 +319,16 @@ class VerbDetektiv:
         felboejt_verb.raettning = uo
         return None
 
+    def sista_koll(self, felboejt_verb):
+        for glosa in self.ordbok:
+            if felboejt_verb.fbv == glosa.lower():
+                print("ditt ord finns, men vi kunde inte rätta det...")
+                return felboejt_verb.fbv
+        else:
+            print("nepp")
+            return None
+        
+
 class Ord:
     def __init__(self, felboejt_verb):
         self.fbv = felboejt_verb
@@ -466,12 +371,12 @@ class Ord:
 
 if __name__ == "__main__":
 
-    vd = VerbDetektiv(verblista)
+    vd = VerbDetektiv('verben.txt', 'SWE.dict.txt')
 
-    x = str(input('\nSkriv ett verb!\n\n'))
+    ord_foer_analys = str(input('\nSkriv ett verb!\n\n'))
 
-    while x != '00':
-        o = Ord(x.lower())
+    while ord_foer_analys != '00':
+        o = Ord(ord_foer_analys.lower())
         print(vd.raetta(o))
-        x = str(input('\n\nSkriv ett verb till!\n(00 för att avsluta)\n'))
+        ord_foer_analys = str(input('\n\nSkriv ett verb till!\n(00 för att avsluta)\n'))
 
