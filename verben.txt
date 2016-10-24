@@ -76,7 +76,7 @@ brinna brinner brann brunnit
 brista brister brast brustit
 brodera broderar broderade broderat
 bromsa bromsar bromsade bromsat
-* brotta brottar brottade brottat
+brotta brottar brottade brottat
 brottas brottas brottades brottats
 bruka brukar brukade brukat
 bry bryr brydde brytt
@@ -130,7 +130,7 @@ falla faller föll fallit
 fasta fastar fastade fastat
 fatta fattar fattade fattat
 festa festar festade festat
-filma filmade filmat
+filma filmar filmade filmat
 fimpa fimpar fimpade fimpat
 finna finner fann funnit
 fira firar firade firat
@@ -146,7 +146,7 @@ fokusera fokuserar fokuserade fokuserat
 fortsätta fortsätter fortsatte fortsatt
 fotografera fotograferar fotograferade fotograferat
 framstå framstår framstod framstått
-frankera frankerade frankerat
+frankera frankerar frankerade frankerat
 fria friar friade friat
 frikänna frikänner frikände frikänt
 fråga frågar frågade frågat
@@ -222,7 +222,7 @@ hamna hamnar hamnade hamnat
 hamra hamrar hamrade hamrat
 handla handlar handlade handlat
 handskas handskas handaskades handskats
-* handska handskar handaskade handskat
+handska handskar handaskade handskat
 hata hatar hatade hatat
 heja hejar hejade hejat
 heta heter hette hetat
@@ -311,7 +311,7 @@ locka lockar lockade lockat
 lova lovar lovade lovat
 lugna lugnar lugnade lugnat
 lukta luktar luktade luktat
-*lycka lyckar lyckade lyckat
+lycka lyckar lyckade lyckat
 lyckas lyckas lyckades lyckats
 lysa lyser lyste lyst
 lyssna lyssnar lyssnade lyssnat
@@ -328,10 +328,10 @@ markerade markerar markerade markerat
 meddela meddelar meddelade meddelat
 mena menar menade menat
 militarisera militariserar militariserade militariserat
-*minna minner minde mint
+minna minner minde mint
 minnas minns mindes mints
 missförstå missförstår missförstod missförstått
-*misslycka misslyckar misslyckade misslyckat
+misslycka misslyckar misslyckade misslyckat
 misslyckas misslyckas misslyckades misslyckats
 misstolka misstolkar misstolkade misstolkat
 motverka motverkar motverkade motverkat
@@ -396,7 +396,7 @@ röntga röntgar röntgade röntgat
 röra rör rörde rört
 rösta röstar röstade röstat
 sakna saknar saknade saknat
-samarbeta samarbetade samarbetat
+samarbeta samarbetar samarbetade samarbetat
 samla samlar samlade samlat
 sammanstråla sammanstrålar sammanstrålade sammanstrålat
 sammanställa sammanställer sammanställde sammanställt
@@ -536,6 +536,7 @@ täcka täcker täckte täckt
 tälta tältar tältade tältat
 tänka tänker tänkte tänkt
 umgå umgår umgick umgått
+umgås umgås umgicks umgåtts
 underskatta underskattar underskattade underskattat
 undra undrar undrade undrat
 unna unnar unnade unnat
@@ -578,7 +579,7 @@ välla väller vällde vällt
 vända vänder vände vänt
 vänja vänjer vande vant
 vänta väntar väntade väntat
-*väsna väsnar väsnade väsnat
+väsna väsnar väsnade väsnat
 väsnas väsnas väsnades väsnats
 väva väver vävde vävt
 växa växer växte vuxit

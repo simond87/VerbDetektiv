@@ -18,7 +18,8 @@ class VerbDetektiv:
                 rad = verben_paa_fil.readline().split()
                 verbl[rad[0]] = (rad[1], rad[2], rad[3])
             except IndexError:
-                break
+                print(rad)
+                break                
     
         verben_paa_fil.close()
         return verbl
@@ -34,8 +35,11 @@ class VerbDetektiv:
         return ordlista
         
     def raetta(self, felboejt_verb):
-       
-        raettad_form = self.slaa_upp(felboejt_verb)
+
+        if felboejt_verb.specialpassiv == False:
+            raettad_form = self.slaa_upp(felboejt_verb)
+        else:
+            raettad_form = None
 
         if raettad_form != None:
             print ("Inget fel!")
@@ -50,7 +54,7 @@ class VerbDetektiv:
             raettad_form = self.vokalfel(felboejt_verb) # kollar vokalfel
 
         if raettad_form == None:
-            felboejt_verb.kraanglighet += 1
+            felboejt_verb.kraanglighet += 2
             raettad_form = self.dblkonsfel(felboejt_verb) # kollar dubbelkonsonantfel
 
         if raettad_form != None:
@@ -69,11 +73,12 @@ class VerbDetektiv:
     def slaa_upp(self, felboejt_verb):
 
         print("inne i slå upp-metoden!")
+        print("kraanglighet: " + str(felboejt_verb.kraanglighet))
         for infinitiv in self.verbl.keys():
             if felboejt_verb.raettning == infinitiv:
                 felboejt_verb.saetta_tempus(-1)
                 return infinitiv
-            elif felboejt_verb.kraanglighet == 0 or felboejt_verb.kraanglighet >= 2:
+            elif felboejt_verb.kraanglighet != 1:
                 tempusindx = 0
                 for boejning in self.verbl[infinitiv]:
                     if felboejt_verb.raettning == boejning:
@@ -128,17 +133,21 @@ class VerbDetektiv:
         elif felboejt_verb.raettning[ordets_laengd-1:] == "t":
             felboejt_verb.saetta_tempus(2)
             raettad_form = self.grupp3(felboejt_verb)
+            if raettad_form == None:
+                raettad_form = self.laegg_till_er(felboejt_verb)
 
         elif felboejt_verb.raettning[ordets_laengd - 1] == 'e':
             raettad_form = self.slut_e(felboejt_verb)
         else:
             print("ingen aendelse identifierad")
+            if (felboejt_verb.raettning[len(felboejt_verb.raettning)-1:]) not in ('a', 'i', 'o', 'u', 'y', 'å', 'ä', 'ö'):
+                raettad_form = self.laegg_till_er(felboejt_verb)
 
         if raettad_form:
+            felboejt_verb.kraanglighet += 1
             felboejt_verb.raettning = raettad_form
                     
         return raettad_form
-
 
     def kolla_med_stavningsjustering(self, felboejt_verb):
         if (self.slaa_upp(felboejt_verb)):
@@ -175,13 +184,14 @@ class VerbDetektiv:
             return None
 
     def grupp3(self, felboejt_verb):
-        print ("grupp3-metoden")
         aendelselaengd = 2
         if felboejt_verb.tempus == 2:
             aendelselaengd -= 1
         rot = felboejt_verb.raettning[:len(felboejt_verb.raettning) - aendelselaengd] + 'a'  # vikte - vika
-
-        if rot not in self.verbl.keys():
+        
+        if rot in self.verbl.keys():
+            return (self.verbl[rot][felboejt_verb.tempus])
+        else:
             if rot[:len(rot) - 1] in self.verbl.keys():  # gåde - gå
                 rot = rot[:len(rot) - 1]
             else:  # brinde - brinna
@@ -207,7 +217,7 @@ class VerbDetektiv:
                             return None
                     else:                   
                         return None
-        return (self.verbl[rot][felboejt_verb.tempus])
+        return None
 
     def slut_rde(self, felboejt_verb):
         print ("rde-metoden")
@@ -246,6 +256,19 @@ class VerbDetektiv:
         raettat_ord = self.grupp1(felboejt_verb)
         return raettat_ord
 
+    def laegg_till_er(self, felboejt_verb):
+        uo = felboejt_verb.raettning
+        felboejt_verb.raettning = felboejt_verb.raettning + 'er'
+        felboejt_verb.saetta_tempus(0)
+        raettad_form = self.grupp3(felboejt_verb)
+        if (raettad_form):
+            return raettad_form
+        else:
+            felboejt_verb.raettning = uo
+            felboejt_verb.saetta_tempus(None)
+            return None
+        
+
     def vokalfel(self, felboejt_verb):
         provvokaler = []
         uo = felboejt_verb.raettning  # sparar ursprungliga raettningsattributet i variabel uo (ursprungligt ord)
@@ -260,6 +283,7 @@ class VerbDetektiv:
                 #print("felboejt_verbs rättning med vokaljustering: " + felboejt_verb.raettning)
                 if self.kolla_med_stavningsjustering(felboejt_verb) != None:
                     return felboejt_verb.raettning
+                
             indx += 1
 
         felboejt_verb.raettning = uo
@@ -309,7 +333,7 @@ class VerbDetektiv:
         indx = 0
         while indx < len(uo)-1:
             if uo[indx] not in vokaler:
-                if uo[indx] == uo[indx+1]:
+                if (uo[indx] == uo[indx+1]) or (uo[indx] == 'c' and uo[indx+1] == 'k'):
                     felboejt_verb.raettning = uo[:indx] + uo[indx+1:]
                     if self.kolla_med_stavningsjustering(felboejt_verb) != None:
                         return felboejt_verb.raettning
@@ -332,8 +356,9 @@ class VerbDetektiv:
 class Ord:
     def __init__(self, felboejt_verb):
         self.fbv = felboejt_verb
-        self.tempus = -1
+        self.tempus = None
         self.passiv = False
+        self.specialpassiv = False
         self.raettning = None
         self.kraanglighet = 0
 
@@ -342,8 +367,9 @@ class Ord:
             self.passiv = True
         else:
             self.raettning = self.fbv
-            if (self.fbv[:3] == 'umg') or (self.fbv[:4] == 'triv'):
+            if (self.fbv[:3] == 'umg') or (self.fbv[:4] == 'triv') or (self.fbv[:4] == 'lyck') or (self.fbv[:6] == 'missly') or (self.fbv[:6] == 'handsk') or (self.fbv[:3] == 'min') or (self.fbv[:3] == 'väs'):
                 self.passiv = True
+                self.specialpassiv = True
             else:
                 self.passiv = False
         
@@ -374,9 +400,10 @@ if __name__ == "__main__":
     vd = VerbDetektiv('verben.txt', 'SWE.dict.txt')
 
     ord_foer_analys = str(input('\nSkriv ett verb!\n\n'))
-
+    
     while ord_foer_analys != '00':
         o = Ord(ord_foer_analys.lower())
         print(vd.raetta(o))
+        print (o.kraanglighet)
         ord_foer_analys = str(input('\n\nSkriv ett verb till!\n(00 för att avsluta)\n'))
 
