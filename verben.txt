@@ -29,6 +29,7 @@ basera baserar baserade baserat
 be ber bad bett
 bearbeta bearbetar bearbetade bearbetat
 bedriva bedriver bedrev bedrivit
+befinna befinner befann befunnit
 befolka befolkar befolkade befolkat
 begrava begraver begravde begravt
 begripa begriper begrep begripit
@@ -37,6 +38,7 @@ begära begär begärde begärt
 behandla behandlar behandlade behandlat
 behålla behåller behöll behållt
 behöva behöver behövde behövt
+bekymra bekymrar bekymrade bekymrat
 bero beror berodde berott
 beräkna beräknar beräknade beräknat
 berätta berättar berättade berättat
@@ -46,6 +48,7 @@ besluta beslutar beslöt beslutat
 bestå består bestod bestått
 beställa beställer beställde beställt
 bestämma bestämmer bestämde bestämt
+besvära besvärar besvärade besvärat
 besöka besöker besökte besökt
 betala betalar betalade betalat
 betrakta betraktar betraktade betraktat
@@ -55,6 +58,7 @@ beundra beundrar beundrade beundrat
 bevara bevarar bevarade bevarat
 bifoga bifogar bifogade bifogat
 bita biter bet bitit
+bjuda bjuder bjöd bjudit
 blanda blandar blandade blandat
 blekna bleknar bleknade bleknat
 bli blir blev blivit
@@ -117,7 +121,9 @@ dö dör dog dött
 dölja döljer döljde döljt
 döma dömer dömde dömt
 elda eldar eldade eldat
+erbjuda erbjuder erbjöd erbjudit
 erfara erfar erfor erfarit
+erinra erinrar erinrade erinrat
 erkänna erkänner erkände erkänt
 ersätta ersätter ersatte ersatt
 falla faller föll fallit
@@ -160,6 +166,7 @@ förbjuda förbjuder förbjöd förbjudit
 förbli förblir förblev förblivit
 förbättra förbättrar förbättrade förbättrat
 förekomma förekommer förekom förekommit
+föreligga föreligger förelåg förelegat
 föreläsa föreläser föreläste föreläst
 föreslå föreslår föreslog föreslagit
 föreställa föreställer föreställde föreställt
@@ -171,6 +178,7 @@ förneka förnekar förnekade förnekat
 förse förser försåg försett
 försova försovar försov försovit
 förstå förstår förstod förstått
+försvaga försvagar försvagade försvagat
 försvara försvarar försvarade försvarat
 försäkra försäkrar försäkrade försäkrat
 försämra försämrar försämrade försämrat
@@ -222,7 +230,7 @@ hicka hickar hickade hickat
 hindra hindrar hindrade hindrat
 hinna hinner hann hunnit
 hjälpa hjälper hjälpte hjälpt
-hoppas hoppas hoppades hoppats
+hoppa hopps hoppads hoppat
 hosta hostar hostade hostat
 hyvla hyvlar hyvlade hyvlat
 hålla håller höll hållit
@@ -238,6 +246,7 @@ hänga hänger hängde hängt
 häva häver hävde hävt
 hävda hävdar hävdade hävdat
 höra hör hörde hört
+införa inför införde infört
 ingå ingår ingick ingått
 inse inser insåg insett
 intressera intresserar intresserade intresserat
@@ -306,9 +315,10 @@ lukta luktar luktade luktat
 lyckas lyckas lyckades lyckats
 lysa lyser lyste lyst
 lyssna lyssnar lyssnade lyssnat
+låna lånar lånade lånat
 låta låter lät låtit
 låtsa låtsar låtsade låtsat
-lägga lägger la lagt
+lägga lägger lade lagt
 lämna lämnar lämnade lämnat
 längta längtar längtade längtat
 lära lär lärde lärt
@@ -323,6 +333,7 @@ minnas minns mindes mints
 missförstå missförstår missförstod missförstått
 *misslycka misslyckar misslyckade misslyckat
 misslyckas misslyckas misslyckades misslyckats
+misstolka misstolkar misstolkade misstolkat
 motverka motverkar motverkade motverkat
 må mår mådde mått
 måla målar målade målat
@@ -335,6 +346,7 @@ möta möter mötte mött
 njuta njuter njöt njutit
 nämna nämner nämnde nämnt
 observera observerar observerade observerat
+odla odlar odlade odlat
 oja ojar ojade ojat
 omge omger omgav omgivit
 omkomma omkommer omkom omkommit
@@ -344,6 +356,7 @@ oroa oroar oroade oroat
 packa packar packade packat
 panta pantar pantade pantat
 passa passar passade passat
+passera passerar passerade passerat
 peka pekar pekade pekat
 planera planerar planerade planerat
 plugga pluggar pluggade pluggat
@@ -351,7 +364,9 @@ posta postar postade postat
 praktisera praktiserar praktiserade praktiserat
 prata pratar pratade pratat
 prova provar provade provat
+påminna påminner påminde påmint
 påverka påverkar påverkade påverkat
+påvisa påvisar påvisade påvisat
 rada radar radade radat
 raka rakar rakade rakat
 ramla ramlar ramlade ramlat
@@ -399,13 +414,16 @@ skallra skallrar skallrade skallrat
 skala skalar skalade skalat
 skicka skickar skickade skickat
 skilja skiljer skilde skilt
+skimra skimrar skimrade skimrat
 skina skiner sken skinit
 skjuta skjuter sköt skjutit
 skoja skojar skojade skojat
 skola ska skulle skolat
 skratta skrattar skrattade skrattat
+skrida skrider skred skridit
 skrika skriker skrek skrikit
 skriva skriver skrev skrivit
+skutta skuttar skuttade skuttat
 skydda skyddar skyddade skyddat
 skynda skyndar skyndade skyndat
 skölja sköljer sköljde sköljt
@@ -423,6 +441,7 @@ smaka smakar smakade smakat
 smickra smickrar smickrade smickrat
 smila smilar smilade smilat
 smitta smittar smittade smittat
+snyta snyter snöt snytit
 snöa snöar snöade snöat
 socka suckar suckade suckat
 sockra sockrar sockrade sockrat
@@ -446,19 +465,25 @@ stoppa stoppar stoppade stoppat
 storkna storknar storknade storknat
 storma stormar stormade stormat
 strunta struntar struntade struntat
+stryka stryker strök strukit
 stråla strålar strålade strålat
+strö strör strödde strött
+strömma strömmar strömmade strömmat
 studera studerar studerade studerat
 stå står stod stått
 stämma stämmer stämde stämt
 städa städar städade städat
 stänga stänger stängde stängt
+stärka stärker stärkte stärkt
 stödja stödjer stödde stött
 störa stör störde stört
 svara svarar svarade svarat
 svetta svettar svettade svettat
 svära svär svir svurit
+sucka suckar suckade suckat
 supa super söp supit
 susa susar susade susat
+svalka svalknar svalkade svalkat
 svimma svimmar svimmade svimmat
 svälja sväljer svalde svalt
 sy syr sydde sytt
@@ -468,7 +493,8 @@ synas syns syntes synts
 syna synar synade synat
 så sår sådde sått
 såga sågar sågade sågat
-säga säger sa sagt
+såra sårar sårade sårat
+säga säger sade sagt
 säkra säkrar säkrade säkrat
 sälja säljer sålde sålt
 sära särar särade särat
@@ -487,6 +513,7 @@ tiga tiger teg tigit
 tillreda tillreder tillredde tillrett
 tillsätta tillsätter tillsatte tillsatt
 tillåta tillåter tillät tillåtit
+tillägga tillägger tillade tillagt
 titta tittar tittade tittat
 tjafsa tjafsar tjafsade tjafsat
 tjata tjatar tjatade tjatat
@@ -527,6 +554,7 @@ utveckla utvecklar utvecklade utvecklat
 vakna vaknar vaknade vaknat
 vara är var varit
 vattna vattnar vattnade vattnat
+veckla vecklar vecklade vecklat
 verka verkar verkade verkat
 veta vet visste vetat
 vika viker vek vikit
@@ -542,6 +570,7 @@ vissna vissnar vissnade vissnat
 vricka vrickar vrickade vrickat
 vrida vrider vred vridit
 vråla vrålar vrålade vrålat
+vräka vräker vräkte vräkt
 vårda vårdar vårdade vårdat
 väga väger vägde vägt
 välja väljer valde valt
@@ -557,8 +586,12 @@ växla växlar växlade växlat
 åberopa åberopar åberopade åberopat
 åka åker åkte åkt
 ångra ångrar ångrade ångrat
+åstadkomma åstadkommer åstadkom åstadkommit
+åtala åtalar åtalade åtalat
 återge återger återgav återgett
+återinföra återinför återinförde återinfört
 återse återser återsåg återsett
+återställa återställer återställde återställt
 återvinna återvinner återvann återvunnit
 återvända återvänder återvände återvänt
 äga äger ägde ägt
@@ -567,13 +600,18 @@ växla växlar växlade växlat
 älta ältar ältade ältat
 ändra ändrar ändrade ändrat
 äta äter åt ätit
+äventyra äventyrar äventyrade äventyrat
 öka ökar ökade ökat
 ömsa ömsar ömsade ömsat
 önska önskar önskade önskat
 öppna öppnar öppnade öppnat
+ödsla ödslar ödslade ödslat
 ösa öser öste öst
 öva övar övade övat
+övningsköra övningskör övningskörde övningskört
 överge överger övergav övergett
+överleva överlever överlevde överlevt
+överlämna överlämnar överlämnade överlämnat
 överraska överraskar överraskade överraskat
 överskatta överskattar överskattade överskattat
 översätta översätter översatte översatt
