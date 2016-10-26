@@ -496,6 +496,7 @@ så sår sådde sått
 såga sågar sågade sågat
 såra sårar sårade sårat
 säga säger sade sagt
+säja säjer sa sagt
 säkra säkrar säkrade säkrat
 sälja säljer sålde sålt
 sära särar särade särat
@@ -511,6 +512,7 @@ tala talar talade talat
 tanka tankar tankade tankat
 tappa tappar tappade tappat
 tiga tiger teg tigit
+tillaga tillagar tillagade tillagat
 tillreda tillreder tillredde tillrett
 tillsätta tillsätter tillsatte tillsatt
 tillåta tillåter tillät tillåtit
