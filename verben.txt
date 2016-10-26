@@ -318,6 +318,7 @@ lyckas lyckas lyckades lyckats
 lysa lyser lyste lyst
 lyssna lyssnar lyssnade lyssnat
 låna lånar lånade lånat
+låsa låser låste låst
 låta låter lät låtit
 låtsa låtsar låtsade låtsat
 lägga lägger lade lagt
