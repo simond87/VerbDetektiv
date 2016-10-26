@@ -369,7 +369,7 @@ tog	tog
 jag	jag
 ville	ville
 imponera	imponera
-stiggde - steg
+stiggde steg
 var	var
 kunde	kunde
 sitta	sitta
@@ -763,244 +763,240 @@ hade	hade
 tänkt	tänkt
 är	är
 *************************
-förändrar förändrar
-promenerar  promenerar
-ser ser
-har har
-är  är
-föredrar  föredrar
-bo  bor
-är
-är
-behövde
-kom
-påverkade
-visste
-är
-finns
-serverar
-kan
-se
-är
-trivas
-är
-vill
-arbetar
-tjäna
-går
-försöker
-lära
-har
-försöker
-lära
-är
-har
-vet
-tror
-är
-är
-säga
-ta
-tror
-lösa
-undvika
-ska
-fler
-fler
-lämna
-utvandra
-är
-är
-är
-bör
-försöka
-hålla
-har
-fått
-ska
-försöka
-ge
-året
-hade
-varit
-kom
-var
-hade
-varit
-är
-bor
-är
-är
-vet
-är
-var
-kom
-kan
-hjälpa
-överkomma
-upplever
-är
-har
-överdriver
-jämföra
-är
-finns
-kommer
-längta
-försöka
-lära
-laga
-är
-är
-blir
-gå
-äta
-kan
+förändrar	förändrar
+promenerar	promenerar
+ser	ser
+har	har
+är	är
+föredrar	föredrar
+bo	bor
+är	är
+behövde	behövde
+kom	kom
+påverkade	påverkade
+visste	visste
+är	är
+finns	finns
+serverar	serverar
+kan	kan
+se	se
+är	är
+trivas	trivas
+är	är
+vill	vill
+arbetar	arbeta
+tjäna	tjäna
+går	åka
+försöker	försöker
+lära	lära
+är	är
+har	har
+vet	vet
+tror	tror
+är	är
+är	är
+säga	säga
+ta	ta
+tror	tror
+lösa	lösa
+undvika	undvika
+ska	ska
+bli	bli
+lämna	lämna
+utvandra	utvandra
+är	är
+är	är
+är	är
+bli	bli
+bör	bör
+försöka	försöka
+hålla	hålla
+har	har
+fått	fått
+ska	ska
+försöka	försöka
+ge	ge
+hade	hade
+varit	varit
+kom	kom
+var	var
+hade	hade
+varit	varit
+är	är
+bor	bor
+är	är
+är	är
+vet	vet
+är	är
+var	var
+kom	kom
+kan	kan
+hjälpa	hjälpa
+överkomma	överkomma
+upplever	upplever
+är	är
+har	har
+överdriver	överdriver
+jämföra	jämför
+är	är
+finns	finns
+kommer	kommer
+längta	längta
+skulle	skulle
+försöka	försöka
+lära	lära
+laga	laga
+är	är
+är	är
+blir	blir
+gå	gå
+äta	äta
+kan	kan
 ätta	äta
-bör
-laga
-kommer
-bo
-har
-få
-måste
+bör	bör
+laga	laga
+kommer	kommer
+bo	bo
+har	har
+få	få
+måste	måste
 anmälla	anmäla
-tar
-får
-här
-är
-finns
-kommer
-trivas
-är
-gäller
-kommer
-försvinna
-går
-är
-lever
-blir
-blir
-blir
-kan
-se
-skulle
-säga
-få
-är
-hinner
-får
-ska
-glömma
-har
-kommer
-lämna
-är
-kommer
-är
-kommer
-träffa
-finns
-går
-träffa
-finns
-vet
-tycker
-finns
-kan
-träffa
-kan
-äta
-mat
-kan
-ha
-betala
-finns
-hoppas
-gav
-hur
-kommer
-bli
-är
-är
-kan
-hjälpa
-behöver
-är
-hoppas
-kommer
-trivas
-måste
-säga
-kommer
-har
-ansökt
-var
-var
-är
-kan
-överleva
-kommer
-är
-är
-blev
-beror
-är
-är
-ta
-tillverkas
-är
-kommer
-genomföra
-blir
-sälja
-blir
-förlorar
-finns
-måste
-tänka
-kommer
-hända
-finns
-anser
-erbjuder
-är
-bo
-arbetar
-är
-hade
-borde
-var
-bo
-tycker
-är
-tog
-tog
-kommer
-förstöra
-måste
-räkna
-kommer
-uppstå
-vet
-har
-förvara
-är
-kan
-betyda
-vill
-kan
-betyda
-förrika
-är
-måste
-ta
-måste
-bygga
-var
-hade
-avslutat
-var
+tar	tar
+får	får
+är	är
+finns	finns
+kommer	kommer
+trivas	trivas
+är	är
+gäller	gäller
+kommer	kommer
+försvinna	försvinna
+går	går
+är	är
+lever	lever
+blir	blir
+blir	blir
+blir	blir
+kan	kan
+se	se
+skulle	skulle
+säga	säga
+få	få
+är	är
+hinner	hinner
+får	får
+ska	ska
+glömma	glömma
+har	har
+kommer	kommer
+lämna	lämna
+är	är
+kommer	kommer
+är	är
+kommer	kommer
+träffa	träffa
+finns	finns
+går	går
+träffa	träffa
+finns	finns
+vet	vet
+tycker	tycker
+finns	finns
+kan	kan
+träffa	träffa
+kan	kan
+äta	äta
+är	är
+kan	kan
+ha	ha
+betala	betala
+finns	finns
+hoppas	hoppas
+gav	gav
+kommer	kommer
+bli	bli
+är	är
+är	är
+kan	kan
+hjälpa	hjälpa
+behöver	behöver
+är	är
+hoppas	hoppas
+kommer	kommer
+trivas	trivas
+måste	måste
+säga	säga
+kommer	kommer
+har	har
+ansökt	ansökt
+fått	fått
+var	var
+var	var
+är	är
+kan	kan
+överleva	överleva
+kommer	kommer
+är	är
+är	är
+blev	blev
+beror	beror
+är	är
+betyder	betyder
+är	är
+ta	ta
+tillverkas	tillverkas
+är	är
+kommer	kommer
+genomföra	genomföra
+blir	blir
+sälja	sälja
+blir	blir
+förlorar	förlorar
+finns	finns
+måste	måste
+tänka	tänka
+kommer	kommer
+hända	hända
+finns	finns
+anser	anser
+erbjuder	erbjuder
+är	är
+bo	bo
+arbetar	arbeta
+är	är
+hade	hade
+borde	borde
+var	vara
+bo	bo
+tycker	tycker
+är	är
+tog	tog
+tog	tog
+kommer	kommer
+förstöra	förstöra
+måste	måste
+räkna	räkna
+kommer	kommer
+uppstå	uppstå
+vet	vet
+har	har
+förvara	förvara
+är	är
+kan	kan
+betyda	betyda
+vill	vill
+kan	kan
+betyda	betyda
+förrika	berika
+är	är
+måste	måste
+ta	ta
+måste måste
+bygga	bygga
+var	var (en_asu6 rad 5559)
+hade	hade
+avslutat	avslutat
+var	var
 ringde
 bestämde
 skulle
