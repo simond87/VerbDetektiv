@@ -420,6 +420,7 @@ rösta röstar röstade röstat
 sakna saknar saknade saknat
 samarbeta samarbetar samarbetade samarbetat
 samla samlar samlade samlat
+sammanfatta sammanfattar sammanfattade sammanfattat
 sammanstråla sammanstrålar sammanstrålade sammanstrålat
 sammanställa sammanställer sammanställde sammanställt
 sanera sanerar sanerade sanerat
