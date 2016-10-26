@@ -762,6 +762,21 @@ göra	göra
 hade	hade
 tänkt	tänkt
 är	är
+*************************
+
+förändrar    förändrar
+promenerar    promenerar
+ser    ser
+har    har
+är    är
+föredrar    föredrar
+bo    bor
+är    är
+behövde    behövde
+kom    kom
+påverkade    påverkade
+
+*************************
 förändrar förändrar
 promenerar  promenerar
 ser ser
