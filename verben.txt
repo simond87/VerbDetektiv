@@ -7,6 +7,7 @@ ange anger angav angett
 anhålla anhåller anhöll anhållit
 anlägga anlägger anlade anlagt
 anlända anländer anlände anlänt
+anmäla anmäler anmälde anmält
 anordna anordnar anordnade anordnat
 anpassa anpassar anpassade anpassat
 anse anser ansåg ansett
@@ -281,9 +282,11 @@ kombinera kombinerar kombinerade kombinerat
 komma kommer kom kommit
 kommunicera kommunicerar kommunicerade kommunicerat
 koncentrera koncentrerar koncentrerade koncentrerat
+konstatera konstaterar konstaterade konstaterat
 koppla kopplar kopplade kopplat
 kosta kostar kostade kostat
 krama kramar kramade kramat
+kritisera kritiserar kritiserade kritiserat
 krocka krockar krockade krockat
 krympa krymper krympte krympt
 krypa kryper kröp krupit
@@ -347,6 +350,7 @@ mörkna mörknar mörknade mörknat
 möjliggöra möjliggör möjliggjorde möjliggjort
 möta möter mötte mött
 njuta njuter njöt njutit
+nå når nådde nått
 nämna nämner nämnde nämnt
 observera observerar observerade observerat
 odla odlar odlade odlat
@@ -354,6 +358,7 @@ oja ojar ojade ojat
 omge omger omgav omgivit
 omkomma omkommer omkom omkommit
 omringa omringar omringade omringat
+operera opererar opererade opererat
 orka orkar orkade orkat
 oroa oroar oroade oroat
 packa packar packade packat
@@ -515,10 +520,12 @@ tanka tankar tankade tankat
 tappa tappar tappade tappat
 tiga tiger teg tigit
 tillaga tillagar tillagade tillagat
+tillhöra tillhör tillhörde tillhört
 tillreda tillreder tillredde tillrett
 tillsätta tillsätter tillsatte tillsatt
 tillåta tillåter tillät tillåtit
 tillägga tillägger tillade tillagt
+tillverka tillverkar tillverkade tillverkat
 titta tittar tittade tittat
 tjafsa tjafsar tjafsade tjafsat
 tjata tjatar tjatade tjatat
@@ -584,6 +591,7 @@ välla väller vällde vällt
 vända vänder vände vänt
 vänja vänjer vande vant
 vänta väntar väntade väntat
+värka värker värkte värkt
 väsna väsnar väsnade väsnat
 väsnas väsnas väsnades väsnats
 väva väver vävde vävt
@@ -614,11 +622,13 @@ växla växlar växlade växlat
 ödsla ödslar ödslade ödslat
 ösa öser öste öst
 öva övar övade övat
-övningsköra övningskör övningskörde övningskört
+överdriva överdriver överdrev överdrivit
 överge överger övergav övergett
+överkomma överkommer överkom överkommit
 överleva överlever överlevde överlevt
 överlämna överlämnar överlämnade överlämnat
 överraska överraskar överraskade överraskat
 överskatta överskattar överskattade överskattat
 översätta översätter översatte översatt
 övertala övertalar övertalade övertalat
+övningsköra övningskör övningskörde övningskört
