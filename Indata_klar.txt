@@ -1,4 +1,5 @@
-﻿heter	heter
+﻿
+heter	heter
 kommer	kommer
 är	är
 talar	talar
@@ -366,7 +367,6 @@ skulle	skulle
 gå	gå
 tog	tog
 tog	tog
-jag	jag
 ville	ville
 imponera	imponera
 stiggde	steg
@@ -670,7 +670,7 @@ har	har
 nådde	nådde
 gör	gör
 låt	låter
-göra	det
+göra	göra
 har	har
 vaknar	vaknar
 kan	kan
@@ -1122,7 +1122,6 @@ förändras	förändras
 är	är
 är	är
 är	är
-det	det
 händer	händer
 har	har
 använt	använt
@@ -1130,7 +1129,7 @@ använt	använt
 är	är
 har	har
 förbättrats	förbättrats
-kommer	kommer (en_asu6 rad 6307)
+kommer	kommer
 kräva	kräva
 drabbas	drabbas
 är	är
@@ -1888,7 +1887,7 @@ måste	måste
 göras	göras
 blir	blir
 är	är
-börja	bärja
+börja	börja
 tänke	tänka
 ska	ska
 göra	göra

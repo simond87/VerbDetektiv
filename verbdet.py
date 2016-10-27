@@ -1,4 +1,5 @@
 
+#12okt
 
 #-------------http://blog.lardigsvenska.com/2010/10/oregelbundna-verb.html
 
@@ -115,52 +116,11 @@ class VerbDetektiv:
         else:
             felboejt_verb.raettning = felboejt_verb.fbv
             #print (felboejt_verb.raettning)
-        ordets_laengd = len(felboejt_verb.raettning)
-        
-        if felboejt_verb.raettning[ordets_laengd-2:] == "ar":
-            felboejt_verb.saetta_tempus(0)
-            felboejt_verb.raettning = self.grupp1(felboejt_verb)
-            loesning_hittad = True
 
-        elif felboejt_verb.raettning[ordets_laengd-3:] == "ade":
-            felboejt_verb.saetta_tempus(1)
-            felboejt_verb.raettning = self.grupp1(felboejt_verb)
-            loesning_hittad = True
+        R = self.aendelseanalys(felboejt_verb)
 
-        elif felboejt_verb.raettning[ordets_laengd-2:] == "at":
-            felboejt_verb.saetta_tempus(2)
-            felboejt_verb.raettning = self.grupp1(felboejt_verb)
-            loesning_hittad = True
-
-        elif felboejt_verb.raettning[ordets_laengd-3:] == "dde" or felboejt_verb.fbv[ordets_laengd-3:] == "tte":
-            felboejt_verb.raettning = self.grupp2(felboejt_verb.fbv[:ordets_laengd-3])
-            loesning_hittad = True
-
-        elif felboejt_verb.raettning[ordets_laengd-3:] == "tt":
-            felboejt_verb.raettning = self.grupp2(felboejt_verb)
-            loesning_hittad = True
-
-        elif felboejt_verb.raettning[ordets_laengd-3:] == "ede":
-            felboejt_verb.saetta_tempus(1)
-            felboejt_verb.raettning = self.edegruppen(felboejt_verb)
-            loesning_hittad = True
-
-        elif felboejt_verb.raettning[ordets_laengd-2:] == "er":
-            felboejt_verb.saetta_tempus(0)
-            felboejt_verb.raettning = self.grupp3(felboejt_verb)
-            loesning_hittad = True
-        
-        elif felboejt_verb.raettning[ordets_laengd-2:] == "de" or felboejt_verb.fbv[ordets_laengd-2:] == "te":
-            felboejt_verb.saetta_tempus(1)
-            felboejt_verb.raettning = self.grupp3(felboejt_verb)
-            loesning_hittad = True
-
-        elif felboejt_verb.raettning[ordets_laengd-2:] == "it":
-            felboejt_verb.saetta_tempus(2)
-            felboejt_verb.raettning = self.grupp3(felboejt_verb)
-            loesning_hittad = True
-
-        if loesning_hittad == True:
+        #if loesning_hittad == True:
+        if R != None:
             if felboejt_verb.passiv == True:
                 if felboejt_verb.raettning[:len(felboejt_verb.raettning)-1] == 'r':
                     felboejt_verb.raettning = felboejt_verb.raettning[:len(felboejt_verb.raettning)-1]
@@ -168,52 +128,159 @@ class VerbDetektiv:
             #print(felboejt_verb.raettning)
             return felboejt_verb.raettning
         else:
-            
             return "Inget hittat\n\n"
-           
+
+    def aendelseanalys(self, felboejt_verb):
+        
+        ordets_laengd = len(felboejt_verb.raettning)
+
+        loesning_hittad = False
+        
+        if felboejt_verb.raettning[ordets_laengd-2:] == "ar":
+            felboejt_verb.saetta_tempus(0)
+            R = self.grupp1(felboejt_verb)
+
+        elif felboejt_verb.raettning[ordets_laengd-3:] == "ade":
+            felboejt_verb.saetta_tempus(1)
+            R = self.grupp1(felboejt_verb)
+
+
+        elif felboejt_verb.raettning[ordets_laengd-2:] == "at":
+            felboejt_verb.saetta_tempus(2)
+            R = self.grupp1(felboejt_verb)
+
+        elif felboejt_verb.raettning[ordets_laengd-3:] == "dde" or felboejt_verb.fbv[ordets_laengd-3:] == "tte":
+            felboejt_verb.saetta_tempus(1)
+            R = self.grupp2(felboejt_verb.fbv)
+
+
+        elif felboejt_verb.raettning[ordets_laengd-3:] == "tt":
+            felboejt_verb.raettning = self.grupp2(felboejt_verb)
+            loesning_hittad = True
+
+        elif felboejt_verb.raettning[ordets_laengd-3:] == "ede":
+            felboejt_verb.saetta_tempus(1)
+            R = self.edegruppen(felboejt_verb)
+
+        elif felboejt_verb.raettning[ordets_laengd-2:] == "er":
+            felboejt_verb.saetta_tempus(0)
+            R = self.grupp3(felboejt_verb)
+        
+        elif felboejt_verb.raettning[ordets_laengd-2:] == "de" or felboejt_verb.fbv[ordets_laengd-2:] == "te":
+            felboejt_verb.saetta_tempus(1)
+            R = self.grupp3(felboejt_verb)
+                
+        elif felboejt_verb.raettning[ordets_laengd-2:] == "it":
+            felboejt_verb.saetta_tempus(2)
+            felboejt_verb.raettning = self.grupp3(felboejt_verb)
+            
+
+        if R != None:
+                felboejt_verb.raettning = R
+                loesning_hittad = True
+                
+        if loesning_hittad == False:
+            return None
+        else:
+            return felboejt_verb.raettning
+        
+    
     def grupp1(self, felboejt_verb):
+        
         if felboejt_verb.tempus == 0 or felboejt_verb.tempus == 2:
             rot = felboejt_verb.raettning[:len(felboejt_verb.raettning)-1]
         else:
             rot = felboejt_verb.raettning[:len(felboejt_verb.raettning)-2]
-        raettboejt_ord = self.verbl[rot][felboejt_verb.tempus]
-        return raettboejt_ord
+
+        if rot in self.verbl.keys():
+            return (self.verbl[rot][felboejt_verb.tempus])
+        else:
+            return None
 
     def grupp2(self, felboejt_verb):
         
         return raettboejt_ord
 
     def grupp3(self, felboejt_verb):
-        raett_boejning = None
-
-        rot = felboejt_verb.raettning[:len(felboejt_verb.raettning)-2] + 'a' #hämtde - hämta
+        
+        rot = felboejt_verb.raettning[:len(felboejt_verb.raettning)-2] + 'a' #vikte - vika
         if rot not in self.verbl.keys():
             if rot[:len(rot)-1] in self.verbl.keys(): #gåde - gå
                 rot = rot[:len(rot)-1]
             else: #brinde - brinna
                 bokstav_att_dubbleras = felboejt_verb.raettning[len(felboejt_verb.raettning)-3:len(felboejt_verb.raettning)-2]
                 rot = felboejt_verb.raettning[:len(felboejt_verb.raettning)-2] + bokstav_att_dubbleras + 'a'
-            
-        raett_boejning = self.verbl[rot][felboejt_verb.tempus]   
-        
-        return raett_boejning
+            if rot not in self.verbl.keys():
+                return None
+                
+        return (self.verbl[rot][felboejt_verb.tempus])
 
     def edegruppen(self, fbv):
         fbv.raettning = fbv.raettning[:len(fbv.raettning)-3]+"ade"
         raettboejt_ord = self.grupp1(fbv)
         return raettboejt_ord
     
-    def vokalfel(self, felboejt_ord):
-        raettboejt_ord = ""
-        return raettboejt_ord
+    def vokalfel(self, fbv):
+        vokaler = ('a', 'e', 'i', 'o', 'u', 'y', 'å', 'ä', 'ö')
+        raett_ord = ""
+        indx = 0
+        for bokstav in fbv.raettning:
+            if bokstav in vokaler:
+                 raett_ord = self.byta_ut_vokal(fbv, indx)
+            indx += 1
+                    
+        return raett_ord
 
+    def leta_vokaler(serie):
+        return 'a'
+    
+    def byta_ut_vokal(self, fbv, indx):
+        provvokaler = []
+
+        if fbv.raettning[indx] == 'a':
+            provvokaler = ['å', 'ä', 'ö']
+        elif fbv.raettning[indx] == 'e':
+            provvokaler = ['u', 'ä', 'i']
+        elif fbv.raettning[indx] == 'i':
+            provvokaler = ['e', 'y']
+        elif fbv.raettning[indx] == 'o':
+            provvokaler = ['å', 'ö', 'u']
+        elif fbv.raettning[indx] == 'u':
+            provvokaler = ['ö', 'o', 'y', 'e']
+        elif fbv.raettning[indx] == 'y':
+            provvokaler = ['i', 'e']
+        elif fbv.raettning[indx] == 'å':
+            provvokaler = ['a', 'o', 'ä', 'ö']
+        elif fbv.raettning[indx] == 'ä':
+            provvokaler = ['a', 'e', 'å']
+        elif fbv.raettning[indx] == 'ö':
+            provvokaler = ['a', 'o', 'u', 'å']
+            
+
+        """
+        a -> å        e -> u
+        a -> ä        e -> ä
+        a -> ö        e -> i
+        
+        i -> e        o -> å
+        i -> y        o -> ö
+                      o -> u
+        u -> ö
+        u -> o        y -> i
+        u -> y        y -> u
+        u -> e
+
+        å -> a        ä -> a        ö -> o
+        å -> o        ä -> e        ö -> u
+        å -> ä        ä -> å        ö -> å
+        å -> ö                      ö -> a"""
+        
+        return 'a'
+        
     def dblkonsfel(self, felboejt_ord):
         raettboejt_ord = ""
         return raettboejt_ord
 
-    def hitta_grundform(self, rot):
-        grundform = ""
-        return grundform
 
 
 class Ord:
@@ -223,10 +290,12 @@ class Ord:
         self.tempus = -1
         self.passiv = self.saetta_passiv(self.fbv)
         self.raettning = None
+        self.vokalbyten = 0
+        self.konsonantaendringar = 0
 
     def saetta_passiv(self, fbv):
         if ( fbv[len(fbv)-1:] == 's' ):
-            print("passa a ser verdade!")
+            print("é passiva!")
             return True
     def saetta_tempus(self, tempus):
         """
@@ -239,9 +308,10 @@ class Ord:
 
 
 vb = VerbDetektiv(verblista)
-x = 'X'
+x = str(input("\nSkriv ett verb!\n\n"))
 while x != '00':
-    x = str(input("\nSkriv något!\n(00 för att avsluta)\n\n"))
-    o = Ord(x)
+    o = Ord(x.lower())
     print(vb.raetta(o))
+    x = str(input("\n\nSkriv ett verb till!\n(00 för att avsluta)\n"))
+
 

@@ -19,6 +19,7 @@ använda använder anlände använt
 arbeta arbetar arbetade arbetat
 arrestera arresterar arresterade arresterat
 aska askar askade askat
+attackera attackerar attackerade attackerat
 avgöra avgör avgjorde avgjort
 avlida avlider avled avlidit
 avslöja avslöjar avslöjade avslöjat
@@ -119,6 +120,7 @@ dreja drejar drejade drejat
 dricka dricker drack druckit
 driva driver drev drivit
 droppa droppar droppade droppat
+drömma drömmer drömde drömt
 duga duger dög dugit
 duka dukar dukade dukat
 duscha duschar duschade duschat
@@ -202,6 +204,7 @@ gapa gapar gapade gapat
 ge ger gav gett
 genomföra genomför genomförde genomfört
 genomsöka genomsöker genomsökte genomsökt
+gifta gifter gifte gift
 gilla gillar gillade gillat
 gissa gissar gissade gissat
 glädja gläder gladde glatt
@@ -238,9 +241,11 @@ heta heter hette hetat
 hicka hickar hickade hickat
 hindra hindrar hindrade hindrat
 hinna hinner hann hunnit
+hitta hittar hittade hittat
 hjälpa hjälper hjälpte hjälpt
 hoppa hoppar hoppade hoppat
 hosta hostar hostade hostat
+hyra hyr hyrde hyrt
 hyvla hyvlar hyvlade hyvlat
 hålla håller höll hållit
 håna hånar hånade hånat
@@ -470,6 +475,7 @@ snyta snyter snöt snytit
 snöa snöar snöade snöat
 socka suckar suckade suckat
 sockra sockrar sockrade sockrat
+somna somnar somnade somnat
 sopa sopar sopade sopat
 sota sotar sotade sotat
 sova sover sov sovit
