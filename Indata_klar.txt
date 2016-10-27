@@ -102,7 +102,7 @@ ringde	ringde
 gick	gick
 bor	bor
 pratade	pratade
-åked åkte
+åked	åkte
 åt	åt
 berättad	berättade
 sovde	sov
@@ -369,7 +369,7 @@ tog	tog
 jag	jag
 ville	ville
 imponera	imponera
-stiggde - steg
+stiggde	steg
 var	var
 kunde	kunde
 sitta	sitta
@@ -512,7 +512,7 @@ kan	kan
 läsa	läsa
 tror	tror
 behöver	behöver
-kommer kommer
+kommer	kommer
 har	har
 är	är
 skriver	skriver
@@ -566,7 +566,7 @@ bestämmer	bestämmer
 är	är
 var	var
 skulle	skulle
-stoppa stoppa
+stoppa	stoppa
 avsatt	avsatt
 ge	ge
 bestämma	bestämma
@@ -620,7 +620,7 @@ pratar	pratar
 blir	blir
 blev	blivit
 är	är
-konstatera konstatera
+konstatera	konstatera
 får	får
 kommer	kommer
 kommer	kommer
@@ -990,7 +990,7 @@ förrika	berika
 är	är
 måste	måste
 ta	ta
-måste måste
+måste	måste
 bygga	bygga
 var	var
 hade	hade
@@ -1770,7 +1770,7 @@ har	har
 finns	finns
 ser	ser
 riskerar	riskerar
-bli
+bli	bli
 är	är
 är	är
 ska	ska

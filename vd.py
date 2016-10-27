@@ -36,10 +36,7 @@ class VerbDetektiv:
         
     def raetta(self, felboejt_verb):
 
-        if felboejt_verb.specialpassiv == False:
-            raettad_form = self.slaa_upp(felboejt_verb)
-        else:
-            raettad_form = None
+        raettad_form = self.slaa_upp(felboejt_verb, True)
 
         if raettad_form != None:
             print ("Inget fel!")
@@ -50,45 +47,54 @@ class VerbDetektiv:
             raettad_form = self.aendelseanalys(felboejt_verb)
 
         if raettad_form == None:
-            felboejt_verb.kraanglighet += 1
+            felboejt_verb.kraanglighet = 0
             raettad_form = self.vokalfel(felboejt_verb) # kollar vokalfel
-
+            if raettad_form:
+                felboejt_verb.kraanglighet += 2
+                
         if raettad_form == None:
-            felboejt_verb.kraanglighet += 2
             raettad_form = self.dblkonsfel(felboejt_verb) # kollar dubbelkonsonantfel
-
+            if raettad_form:
+                felboejt_verb.kraanglighet += 4
+            
         if raettad_form != None:
             if felboejt_verb.passiv == True:
                 if felboejt_verb.raettning[len(felboejt_verb.raettning) - 1:] == 'r':
                     felboejt_verb.raettning = felboejt_verb.raettning[:len(felboejt_verb.raettning) - 1]
                 felboejt_verb.raettning = felboejt_verb.raettning + 's'
-            #print("felboejt_verb.kraanglighet: " + str(felboejt_verb.kraanglighet))
             return felboejt_verb.raettning
         else:
             raettad_form = (self.sista_koll(felboejt_verb))
             if raettad_form:
+                felboejt_verb.kraanglighet += 6
                 return raettad_form
         return "Inget hittat\n\n"
 
-    def slaa_upp(self, felboejt_verb):
+    def slaa_upp(self, felboejt_verb, foersta_kollen):
 
+        verb_att_kolla = ''
+        if foersta_kollen == True:
+            verb_att_kolla = felboejt_verb.fbv
+        else:
+            verb_att_kolla = felboejt_verb.raettning
+        
         print("inne i slå upp-metoden!")
-        print("kraanglighet: " + str(felboejt_verb.kraanglighet))
+        print("kraanglighet (slå-upp-metoden): " + str(felboejt_verb.kraanglighet))
         for infinitiv in self.verbl.keys():
-            if felboejt_verb.raettning == infinitiv:
+            if verb_att_kolla == infinitiv:
                 felboejt_verb.saetta_tempus(-1)
                 return infinitiv
-            elif felboejt_verb.kraanglighet != 1:
+            else:
                 tempusindx = 0
                 for boejning in self.verbl[infinitiv]:
-                    if felboejt_verb.raettning == boejning:
+                    if verb_att_kolla == boejning:
                         felboejt_verb.saetta_tempus(tempusindx)
                         return boejning
                     tempusindx += 1
         return None
 
     def aendelseanalys(self, felboejt_verb):
-        print("felboejt_verb.raettning: " + felboejt_verb.raettning)
+        print("felboejt_verb.raettning i ändelseanalysen: " + felboejt_verb.raettning)
         ordets_laengd = len(felboejt_verb.raettning)
         raettad_form = None
         
@@ -140,21 +146,22 @@ class VerbDetektiv:
             raettad_form = self.slut_e(felboejt_verb)
         else:
             print("ingen aendelse identifierad")
-            if (felboejt_verb.raettning[len(felboejt_verb.raettning)-1:]) not in ('a', 'i', 'o', 'u', 'y', 'å', 'ä', 'ö'):
-                raettad_form = self.laegg_till_er(felboejt_verb)
+            print(felboejt_verb.raettning[len(felboejt_verb.raettning)-1:])
+            if felboejt_verb.kraanglighet != 1 and felboejt_verb.raettning[len(felboejt_verb.raettning)-1:] not in ('a', 'i', 'o', 'u', 'y', 'å', 'ä', 'ö'):
+                    raettad_form = self.laegg_till_er(felboejt_verb)
 
         if raettad_form:
-            felboejt_verb.kraanglighet += 1
+            if felboejt_verb.kraanglighet != 1:
+                felboejt_verb.kraanglighet += 1
             felboejt_verb.raettning = raettad_form
+            print("kraanglighet (ändelseanalys-metoden): " + str(felboejt_verb.kraanglighet))
                     
         return raettad_form
 
     def kolla_med_stavningsjustering(self, felboejt_verb):
-        if (self.slaa_upp(felboejt_verb)):
-            felboejt_verb.kraanglighet += 1
+        if (self.slaa_upp(felboejt_verb, False)):
             return felboejt_verb.raettning
         elif (self.aendelseanalys(felboejt_verb)):
-            felboejt_verb.kraanglighet += 2
             return felboejt_verb.raettning
         else:
             return None
@@ -249,6 +256,7 @@ class VerbDetektiv:
         if (self.kolla_med_stavningsjustering(felboejt_verb)):
             felboejt_verb.saetta_tempus(-1)
             return felboejt_verb.raettning
+        felboejt_verb.raettning = uo
         return None
 
     def slut_ede(self, felboejt_verb):
@@ -280,7 +288,6 @@ class VerbDetektiv:
                 continue
             for vokal in provvokaler:
                 felboejt_verb.raettning = uo[:indx] + vokal + uo[indx + 1:]
-                #print("felboejt_verbs rättning med vokaljustering: " + felboejt_verb.raettning)
                 if self.kolla_med_stavningsjustering(felboejt_verb) != None:
                     return felboejt_verb.raettning
                 
@@ -352,13 +359,11 @@ class VerbDetektiv:
             print("nepp")
             return None
         
-
 class Ord:
     def __init__(self, felboejt_verb):
         self.fbv = felboejt_verb
         self.tempus = None
         self.passiv = False
-        self.specialpassiv = False
         self.raettning = None
         self.kraanglighet = 0
 
@@ -369,7 +374,6 @@ class Ord:
             self.raettning = self.fbv
             if (self.fbv[:3] == 'umg') or (self.fbv[:4] == 'triv') or (self.fbv[:4] == 'lyck') or (self.fbv[:6] == 'missly') or (self.fbv[:6] == 'handsk') or (self.fbv[:3] == 'min') or (self.fbv[:3] == 'väs'):
                 self.passiv = True
-                self.specialpassiv = True
             else:
                 self.passiv = False
         
@@ -404,6 +408,6 @@ if __name__ == "__main__":
     while ord_foer_analys != '00':
         o = Ord(ord_foer_analys.lower())
         print(vd.raetta(o))
-        print (o.kraanglighet)
+        print ("krånglighet: " + str(o.kraanglighet))
         ord_foer_analys = str(input('\n\nSkriv ett verb till!\n(00 för att avsluta)\n'))
 

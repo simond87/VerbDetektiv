@@ -167,6 +167,7 @@ få får fick fått
 fånga fångar fångade fångat
 fäkta fäktar fäktade fäktat
 fälla fäller fällde fällt
+föda föder föddes fött
 följa följer följde följt
 föra för förde fört
 förbereda förbereder förberedde förberett
@@ -238,7 +239,7 @@ hicka hickar hickade hickat
 hindra hindrar hindrade hindrat
 hinna hinner hann hunnit
 hjälpa hjälper hjälpte hjälpt
-hoppa hopps hoppads hoppat
+hoppa hoppar hoppade hoppat
 hosta hostar hostade hostat
 hyvla hyvlar hyvlade hyvlat
 hålla håller höll hållit
